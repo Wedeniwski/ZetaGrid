@@ -1,0 +1,73 @@
+This run (LASTN=377535715746, NRANGE=20, MDIMENS=129425, VERSION=0141) was started at Sat Jul 03 08:29:38 2004
+Initial Gram point G(377535715745)=105233436579.216
+Bad start with LASTN=377535715746, Z(105233436579.216)=0 this starting value is too small.
+LASTN is decreased by 1 due to this 'unclear' value of Z(t).
+Initial Gram point G(377535715744)=105233436578.949
+LASTN is decreased by 1 due to the bad initial Gram point G(377535715744)=105233436578.949
+Initial Gram point G(377535715743)=105233436578.682
+Call search2b between 105233436579.483 and 105233436580.017.
+Call search2c between 105233436579.483 and 105233436579.75.
+Call search2d between 105233436579.483 and 105233436579.75.
+Call searchND(2) between 105233436579.483 and 105233436579.483, h=1.19209289550781e-007.
+Call search2c between 105233436579.75 and 105233436580.017.
+Call search2d between 105233436579.75 and 105233436580.017.
+Call the new rule for a Gram block of length 1.
+ i=0, t=105233436579.216, z=-0.0146090976799708, #zeros=0
+ i=1, t=105233436579.483, z=0.444219620825988, #zeros=1
+Call search3a(4) between 105233436579.216 and 105233436579.483 to find 3 zeros.
+Call search3a(8) between 105233436579.216 and 105233436579.483 to find 3 zeros.
+Call search3a(16) between 105233436579.216 and 105233436579.483 to find 3 zeros.
+Call search3a(32) between 105233436579.216 and 105233436579.483 to find 3 zeros.
+Call search3a(64) between 105233436579.216 and 105233436579.483 to find 3 zeros.
+Call search3a(128) between 105233436579.216 and 105233436579.483 to find 3 zeros.
+Call search3a(256) between 105233436579.216 and 105233436579.483 to find 3 zeros.
+We did not yield any zeros between 105233436579.483 and 105233436580.017 and the new rule has not found additional zeros in previous Gram block.
+Therefore, the new rule will be activated for the next Gram block.
+Number of sign changes should be 2, but we found only 0.
+This happened between 377535715746 and 377535715748.
+Call the new rule for a Gram block of length 2.
+ i=0, t=105233436580.017, z=109.406855068403, #zeros=0
+ i=1, t=105233436580.284, z=17.479386606002, #zeros=0
+ i=2, t=105233436580.551, z=0.957795086130158, #zeros=2
+Call search2c between 105233436580.017 and 105233436580.284.
+Call search2d between 105233436580.017 and 105233436580.284.
+Call searchN(4) between 105233436580.284 and 105233436580.551 to find 4 zeros.
+Call searchN(8) between 105233436580.284 and 105233436580.551 to find 4 zeros.
+Call searchN(16) between 105233436580.284 and 105233436580.551 to find 4 zeros.
+Call searchN(32) between 105233436580.284 and 105233436580.551 to find 4 zeros.
+Call searchN(64) between 105233436580.284 and 105233436580.551 to find 4 zeros.
+Call searchN(128) between 105233436580.284 and 105233436580.551 to find 4 zeros.
+Call searchN(256) between 105233436580.284 and 105233436580.551 to find 4 zeros.
+Call the new rule for a Gram block of length 2.
+ i=0, t=105233436578.682, z=-2.54296132416581, #zeros=0
+ i=1, t=105233436578.949, z=-0.0166983217814539, #zeros=0
+ i=2, t=105233436579.216, z=-0.0146090976799708, #zeros=2
+Call search2c between 105233436578.682 and 105233436578.949.
+Call search2d between 105233436578.682 and 105233436578.949.
+Call searchND(2) between 105233436578.949 and 105233436578.949, h=3.57627868652344e-007.
+Call searchN(4) between 105233436578.949 and 105233436579.216 to find 4 zeros.
+Call searchN(8) between 105233436578.949 and 105233436579.216 to find 4 zeros.
+.... Call sumMZ at 105233436579.049, MZ=0.58443735310495e-2,0.58443735310497e-2
+.... Call sumMZ at 105233436579.183, MZ=0.10348955350236e-2,0.10348955350241e-2
+Extreme S(t) between 105233436578.682 and 105233436579.216
+We found the missing two sign changes between 105233436580.017 and 105233436580.551.
+This happened between 377535715748 and 377535715750
+NFIRST (was input for this run)          = 377535715744
+LASTN (input for next run)               = 377535715766
+the corresponding Gram point             = 105233436584.554
+nzevalu (number of Z-evaluations)        = 1945
+ndzevalu (number of DZ-evaluations)      = 2
+ecorate                                  = 97.35
+average time for one Z-evaluation        = 0.0137269922879177
+average time for one DZ-evaluation       = 0.891
+total time used for all Z-evaluations    = 26.699
+total time used for all DZ-evaluations   = 1.782
+total time used in this run              = 28.802
+average total time for one Z-evaluation  = 0.0147930148947098
+last m (= summation range in Z(t))       = 129415.69306301
+first line                               = 04.105233436578.982
+last line                                = 1.105233436584.554
+reduction                                = 1052334365
+the starting Gram point                  = 377535715745
+number of lines                          = 24
+@

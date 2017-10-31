@@ -1,0 +1,34 @@
+This run (LASTN=1000000000000, NRANGE=1001, MDIMENS=206403, VERSION=0140) was started at Tue Mar 02 22:14:43 2004
+Initial Gram point G(999999999999)=267653395648.874
+LASTN is decreased by 1 due to the bad initial Gram point G(999999999999)=267653395648.874
+Initial Gram point G(999999999998)=267653395648.617
+.... Call sumMZ at 267653395653.174, MZ=-0.69127059432113e-2,-0.69127059432108e-2
+.... Call sumMZ at 267653395662.352, MZ=-0.22077355147737e-2,-0.22077355147737e-2
+.... Call sumMZ at 267653395720.883, MZ=-0.45038326904056e-2,-0.45038326904056e-2
+.... Call sumMZ at 267653395732.564, MZ=-0.65212316546130e-2,-0.65212316546125e-2
+Call search3a(4) between 267653395762.856 and 267653395763.113 to find 3 zeros.
+.... Call sumMZ at 267653395806.498, MZ=0.69521958853385e-3,0.69521958853430e-3
+.... Call sumMZ at 267653395811.376, MZ=0.26971846768414e-2,0.26971846768418e-2
+.... Call sumMZ at 267653395841.155, MZ=-0.57052982446918e-2,-0.57052982446914e-2
+.... Call sumMZ at 267653395869.779, MZ=-0.33529485779939e-2,-0.33529485779939e-2
+.... Call sumMZ at 267653395881.203, MZ=0.65784681541471e-2,0.65784681541476e-2
+Call search3a(4) between 267653395895.066 and 267653395895.323 to find 3 zeros.
+NFIRST (was input for this run)          = 999999999999
+LASTN (input for next run)               = 1000000001002
+the corresponding Gram point             = 267653395906.105
+nzevalu (number of Z-evaluations)        = 1244
+ndzevalu (number of DZ-evaluations)      = 9
+ecorate                                  = 1.24925224327019
+average time for one Z-evaluation        = 0.0227266881028939
+average time for one DZ-evaluation       = 2.24422222222222
+total time used for all Z-evaluations    = 28.272
+total time used for all DZ-evaluations   = 20.198
+total time used in this run              = 48.53
+average total time for one Z-evaluation  = 0.038731045490822
+last m (= summation range in Z(t))       = 206393.703861791
+first line                               = 20.267653395648.745
+last line                                = 210.267653395905.848
+reduction                                = 267653395
+the starting Gram point                  = 999999999999
+number of lines                          = 1003
+@

@@ -1,0 +1,1131 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""res\\Saver.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "\r\n"
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "#include ""afxres.rc""  // Standard components\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+128                     ICON    DISCARDABLE     "res\\Saver.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  34, 22, 217, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About ZetaGrid"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            128,-1,12,14,20,20
+    LTEXT           "ZetaGrid V 1.9.3",-1,40,8,119,8
+    LTEXT           "© Copyright IBM Corp. 2004 All Rights Reserved.",-1,40,
+                    23,157,8
+    DEFPUSHBUTTON   "OK",1,176,6,32,14,WS_GROUP
+    LTEXT           "Sebastian Wedeniwski (wedeniws@de.ibm.com)",-1,40,38,
+                    154,8
+END
+
+IDD_WAITFRAME DIALOG DISCARDABLE  0, 0, 129, 38
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "Test running:",IDC_STATUS,7,7,116,23,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+END
+
+IDD_PROGRESS DIALOG DISCARDABLE  0, 0, 251, 34
+STYLE DS_SYSMODAL | DS_MODALFRAME | WS_POPUP | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,
+                    7,14,236,15
+    LTEXT           "Installing ZetaGrid",IDC_STATIC,7,4,58,8
+END
+
+IDD_SAVER_DIALOG DIALOG DISCARDABLE  0, 0, 352, 148
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ZetaGrid Configuration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,13,127,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,83,127,50,14
+    PUSHBUTTON      "&Test",IDC_BUTTON_TEST,153,127,50,14
+    PUSHBUTTON      "&About",IDABOUT,223,127,50,14
+    PUSHBUTTON      "&Help",IDC_BUTTON_HELP,291,127,50,14
+END
+
+IDD_STATE DIALOGEX 0, 0, 262, 134
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Current status:                                                                                        ",
+                    IDC_STATIC_CURRENT_STATUS,7,75,248,8
+    LTEXT           "Progress of active work unit:",IDC_STATIC_PROGRESS,7,62,
+                    248,8
+    RTEXT           "0 %",IDC_STATIC_PERCENT,233,72,22,14,SS_CENTERIMAGE
+    CONTROL         "Progress1",IDC_PROGRESS_ACTIVE,"msctls_progress32",
+                    PBS_SMOOTH | WS_BORDER | WS_GROUP,7,72,218,14,
+                    WS_EX_RIGHT
+    LTEXT           "Number of local work units: %d (completed %d)",
+                    IDC_STATIC_LOCAL_PACKAGES,7,105,248,8
+    CTEXT           "00:00:00",IDC_STATIC_CLOCK_LARGE,95,7,160,45,
+                    SS_CENTERIMAGE
+    LTEXT           "Performance index (zeros per second): ...",
+                    IDC_STATIC_PERFORMANCE,7,119,248,8
+    LTEXT           "",IDC_STATIC_REMAINING,7,90,139,8
+    CONTROL         160,IDC_STATIC,"Static",SS_BITMAP,7,7,82,50
+END
+
+IDD_DIALOG_JAVA_ERROR DIALOG DISCARDABLE  0, 0, 214, 166
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Java Error!"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,82,145,50,14
+    LTEXT           "If you do not have a 'java.exe' then you can download it for example from 'Java(TM) 2 Platform, Standard Edition (J2SE(TM))'\n\nhttp://java.sun.com/j2se/1.3/download.html",
+                    IDC_STATIC_ERROR3,7,92,200,43,SS_SUNKEN
+    LTEXT           "If you do not know where your 'java.exe' file is, then go to START, go to SEARCH, go to FILES OR FOLDERS, and type 'java.exe'. Find what directory it is in, e.g.\nC:\\Program Files\\java13\\jre\\bin\\,\nand then type\nC:\\Program Files\\java13\\jre\\bin\\java.exe",
+                    IDC_STATIC_ERROR2,7,35,200,50
+    LTEXT           "File 'java.exe' does not exist.",IDC_STATIC_ERROR,7,7,
+                    200,21
+END
+
+IDD_DIALOG_PORT DIALOG DISCARDABLE  0, 0, 241, 81
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Port number which is used to avoid conflicts"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "The port number ",IDC_STATIC,7,13,55,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_PORT_NUMBER,65,13,40,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "is used by another application.",IDC_STATIC,112,13,102,
+                    14,SS_CENTERIMAGE
+    LTEXT           "Please change this value only if you KNOW what you are doing!",
+                    IDC_STATIC,7,32,227,14,SS_CENTERIMAGE
+    DEFPUSHBUTTON   "OK",IDOK,95,60,50,14
+    LTEXT           "Do NOT change this value if you installed the client more than one time.",
+                    IDC_STATIC,7,47,227,8
+END
+
+IDD_DIALOG_CONTROL_CENTER DIALOGEX 0, 0, 280, 106
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "  ZetaGrid Control Center"
+MENU IDR_MENU_CONTROL
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Hide",IDC_BUTTON_HIDE,128,85,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Transfer Work Units",IDC_BUTTON_TRANSFER_WU,190,85,83,
+                    14
+    LTEXT           "Active threads:",IDC_STATIC_ACTIVE_THREADS,7,77,266,8
+    LTEXT           "&Thread ID",IDC_STATIC_THREAD_ID,7,85,38,14,
+                    SS_CENTERIMAGE | NOT WS_VISIBLE
+    COMBOBOX        IDC_COMBO_THREAD_ID,51,87,40,34,CBS_DROPDOWNLIST | 
+                    CBS_SORT | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Number of local work units: %d (completed %d)",
+                    IDC_STATIC_LOCAL_PACKAGES,7,7,266,8
+    LTEXT           "Performance index (zeros per second): ...",
+                    IDC_STATIC_PERFORMANCE,7,23,266,8
+    LTEXT           "Current status:                                                                                        ",
+                    IDC_STATIC_CURRENT_STATUS,7,50,266,8
+    LTEXT           "Progress of active work unit:",IDC_STATIC_PROGRESS,7,39,
+                    266,8
+    RTEXT           "0 %",IDC_STATIC_PERCENT,251,48,22,14,SS_CENTERIMAGE
+    CONTROL         "Progress1",IDC_PROGRESS_ACTIVE,"msctls_progress32",
+                    PBS_SMOOTH | WS_BORDER | WS_GROUP,7,48,238,14,
+                    WS_EX_RIGHT
+    LTEXT           "",IDC_STATIC_REMAINING,7,66,266,8
+END
+
+IDD_DIALOG_INSTALL DIALOG DISCARDABLE  0, 0, 200, 154
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Install ZetaGrid v.1.9.3"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Mode",IDC_STATIC,7,7,186,103
+    CONTROL         "&Screen saver",IDC_RADIO_MODE_SCREEN_SAVER,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,13,19,58,10
+    CONTROL         "&NT Service (low priority process in the background)",
+                    IDC_RADIO_MODE_SERVICE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,13,31,177,10
+    CONTROL         "&Command line",IDC_RADIO_MODE_COMMAND_LINE,"Button",
+                    BS_AUTORADIOBUTTON,13,55,60,10
+    CONTROL         "Run at System Startup",IDC_CHECK_SHORTCUT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,67,87,10
+    CONTROL         "Start the client after installation",
+                    IDC_CHECK_START_CLIENT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,91,112,10
+    DEFPUSHBUTTON   "OK",IDOK,7,133,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,75,133,50,14
+    PUSHBUTTON      "Help",IDC_BUTTON_HELP,143,133,50,14
+    CONTROL         "Start the Control Center after installation",
+                    IDC_CHECK_START_CONTROL_CENTER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,116,140,10
+    CONTROL         "Run Control Center at System Startup",
+                    IDC_CHECK_CMD_CONTROL_CENTER_STARTUP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,79,133,10
+    CONTROL         "Run Control Center at System Startup",
+                    IDC_CHECK_SERVICE_CONTROL_CENTER_STARTUP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,43,133,10
+END
+
+IDD_DIALOG_LICENSE DIALOG DISCARDABLE  0, 0, 294, 186
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "License Agreement"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Yes",IDOK,95,165,50,14
+    PUSHBUTTON      "&No",IDCANCEL,149,165,50,14
+    LTEXT           "Please read the following license agreement carefully.",
+                    IDC_STATIC,7,7,169,8
+    LTEXT           "Press the PAGE DOWN key to see the rest of the agreement.",
+                    IDC_STATIC,7,21,194,8
+    EDITTEXT        IDC_EDIT_LICENSE,7,34,280,94,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+    LTEXT           "Do you accept all the terms of the proceding License Agreement? If you choose No, the",
+                    IDC_STATIC,7,134,277,8
+    LTEXT           "setup will close. To install the ZetaGrid client you must accept this agreement.",
+                    IDC_STATIC,7,145,244,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+1 VERSIONINFO
+ FILEVERSION 1,9,3,0
+ PRODUCTVERSION 1,9,3,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "ZetaGrid\0"
+            VALUE "FileVersion", "1, 9, 3, 0\0"
+            VALUE "InternalName", "ZetaGrid\0"
+            VALUE "LegalCopyright", "Copyright © 2001-2004\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "SAVER.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "ZetaGrid\0"
+            VALUE "ProductVersion", "1, 9, 3, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_NULLCURSOR          CURSOR  DISCARDABLE     "res\\cursor1.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_SAVER_DIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 341
+        BOTTOMMARGIN, 141
+    END
+
+    IDD_STATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_DIALOG_JAVA_ERROR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 207
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_DIALOG_PORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+
+    IDD_DIALOG_CONTROL_CENTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 273
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 99
+    END
+
+    IDD_DIALOG_INSTALL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_DIALOG_LICENSE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 287
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 179
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_CONTROL MENU DISCARDABLE 
+BEGIN
+    POPUP "&Config"
+    BEGIN
+        MENUITEM "Local config",                ID_CONFIG_CONFIG
+        MENUITEM "Server config",               ID_SERVER_CONFIG
+    END
+    POPUP "&Actions"
+    BEGIN
+        MENUITEM "Transfer work units",         IDD_ACTIONS_TRANSFER_WORK_UNITS
+
+        MENUITEM SEPARATOR
+        MENUITEM "Restart computation",         IDD_ACTIONS_RESTART_COMPUTATION
+
+        MENUITEM "Stop computation",            IDD_ACTIONS_STOP_COMPUTATION
+    END
+    POPUP "&Web"
+    BEGIN
+        MENUITEM "Home",                        ID_WEB_HOME
+        MENUITEM "News",                        ID_WEB_NEWS
+        MENUITEM "Forum",                       ID_HELP_FORUM
+        MENUITEM "Current ranking",             ID_WEB_STATISTIC
+        MENUITEM "Current ranking (detailed view)", ID_WEB_STATISTIC_DETAIL
+        MENUITEM "Team members",                ID_WEB_TEAMMEMBERS
+    END
+    POPUP "&Log"
+    BEGIN
+        MENUITEM "View information log",        ID_LOG_VIEW_INFORMATION_LOG
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "FAQ",                         ID_HELP_FAQ
+        MENUITEM "About",                       ID_HELP_ABOUT
+    END
+END
+
+IDR_POPUP_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "POPUP_MENU"
+    BEGIN
+        MENUITEM "Local config",                ID_CONFIG_CONFIG
+        MENUITEM "Server config",               ID_SERVER_CONFIG
+        MENUITEM SEPARATOR
+        MENUITEM "Home",                        ID_WEB_HOME
+        MENUITEM "News",                        ID_WEB_NEWS
+        MENUITEM "Forum",                       ID_HELP_FORUM
+        MENUITEM "Current ranking",             ID_WEB_STATISTIC
+        MENUITEM "Current ranking (detailed view)", ID_WEB_STATISTIC_DETAIL
+        MENUITEM "Team members",                ID_WEB_TEAMMEMBERS
+        MENUITEM SEPARATOR
+        MENUITEM "FAQ",                         ID_HELP_FAQ
+        MENUITEM SEPARATOR
+        MENUITEM "Restart Computation",         ID_RESTART_COMPUTATION
+        MENUITEM "Stop Computation",            ID_STOP_COMPUTATION
+        MENUITEM SEPARATOR
+        MENUITEM "Close",                       ID_CLOSE
+        MENUITEM "View",                        ID_VIEW
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_ZETA                BITMAP  DISCARDABLE     "res\\zeta.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About Saver..."
+    IDS_SCREENSAVER         "This is a screensaver and cannot be run as a standalone executable."
+    IDS_FILE_NOT_EXISTS     "File '%s' does not exist."
+    IDS_ERROR               "Error!"
+    IDS_FILE_NO_PERMISSION  "File %s has no read and write permission."
+    IDS_STRING_INIT         "Initialization."
+    IDS_NAME_NOT_DEFINED    "Please enter your name.\nWe would very much appreciate to see your real name in the statistics, but if you do not want to enter your real name for some reason, please use the name 'anonymous' instead."
+    IDS_PROCESSORS_PACKAGES_ERROR 
+                            "The number of work units must be greater than or equal to the number of processors."
+    IDS_PROCESSORS_GREATER_5 
+                            "Please contact Sebastian Wedeniwski (wedeniws@de.ibm.com) if you want to use more than 5 processors."
+    IDS_INFORMATION         "Information"
+    IDS_WORK_UNITS_GREATRER_5 
+                            "The general limit of work units provided by the server is 5 for beginners,\n10 for users who have calculated more than 10 million zeros,\nand 25 for users who have calculated more than 100 million zeros."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DESCRIPTION         "ZetaGrid"
+    IDS_SYSTEM_TRAY         "ZetaGrid Control Center"
+    IDS_TITLE_CONFIGURATION "ZetaGrid Configuration"
+    IDS_START_CLIENT        "Start ZetaGrid client"
+    IDS_START_COMMAND_LINE_CLIENT "Do you want to start the client?"
+    IDS_HOW_TO_FIND_FILE    "If you do not know where your '%s' file is, then go to START, go to SEARCH, go to FILES OR FOLDERS, and type %s. Find what directory it is in, for example\n%s,\nand then type\n%s"
+    IDS_HOW_TO_DOWNLOAD_JVM "If you do not have a '%s' then you can download it, for example from 'Java(TM) 2 Platform, Standard Edition (J2SE(TM))'\n\nhttp://java.sun.com/j2se/1.3/download.html"
+    IDS_SERVER_ERROR_OCCURRED 
+                            "Perhaps a server error occurred. Please try again later."
+    IDS_ERROR_OCCURRED      "An error occurred!"
+    IDS_ERROR_OCCURRED_SEE_DETAILS 
+                            "An error occurred.\nDo you want to see the details?"
+    IDS_ERROR_OCCURRED_SEE_DETAILS_SERVICE 
+                            "An error occurred.\nDo you want to see the details?\n\nAdditionally, you can look in the 'Application Log' of the Event Viewer."
+    IDS_NOTE_SIZE_OF_WORK_UNIT 
+                            "The performance index will decrease about 0.3% per day because the complexity of separating the zeros is growing continuously.\nTherefore, the perfomance index will be 10% lower in about 30 days."
+    IDS_NO_ACTIVE_WORK_UNIT "No active work unit found!\nThe properties at the server can only be changed if you have at least one active work unit."
+    IDS_CONFIG_SERVER       "Config at server"
+    IDS_CHANGE_CONFIG_SERVER 
+                            "Do you also want to change your configuration at the server?\n\nNote: A new user will be defined if you have changed your user name or e-mail address!"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_WORK_UNITS_LESS_1   "The number of work units must be greater than or equal to 1."
+    IDS_TEAMNAME_INFO       "If you want to change your team membership you must supply a valid e-mail address in the appropriate field.\nDo you want to change your configuration?"
+    IDS_PLEASE_NOTE         "Please note"
+    IDS_NAME_NOTE           "We would very much appreciate to see your real name in the statistics, but if you do not want to enter your real name for some reason, please use the name 'anonymous' instead.\nDo you want to use the name 'anonymous'?"
+    IDS_EMAIL_NOTE          "The e-mail address is optional. We guarantee not to give your e-mail address to any third parties. The e-mail is only used for location statistics and to send important ZetaGrid related announcements. Do not worry, this will rarely happen."
+    IDS_TEAM_NOTE           "The team name is optional. You can be a member of a team and your name will be listed in further statistics. The team membership can only be changed in the server configuration."
+    IDS_REMOVE_FILES        "Do you want to remove all remaining files (e.g. uncompleted work units and the local configuration) in '%s'?"
+    IDS_UNINSTALL           "Uninstall ZetaGrid"
+    IDS_CONNECTION          "Connecting to ZetaGrid server"
+    IDS_NO_CONNECTION_RESTART 
+                            "There is no connection to the server at %s.\nDo you want to restart the client?"
+    IDS_ACTIVATE_NEW_CONFIG "Activate new configuration"
+    IDS_ACTIVATE_NEW_CONFIG_NOW 
+                            "Do you want to activate the new configuration NOW?"
+    IDS_PREREQUISITE        "Prerequisite"
+    IDS_REQUIRED_JAVA_VM    "Please install the  Java Runtime Environment 1.3 or higher, e.g. from http://java.sun.com/j2se/1.3/download.html"
+    IDS_WARNING             "Warning!"
+    IDS_ALREADY_RUNNING     "All was successful but you may have more installation remaining of the ZetaGrid client!\nPerhaps as a service or command line?\nThe ZetaGrid clients runs only properly if you use just one installation."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SUCCESSFUL          "Successful!"
+    IDS_MESSAGE_INFO        "An e-mail will be on the way confirming your changes if your e-mail address is correct, if your client requests new work units, and if this is not your first configuration (the user name and e-mail is not defined at the server)."
+    IDS_MUST_BE_ONLINE      "You must be online to connect to the ZetaGrid server or your Firewall Rule should allow this connection."
+    IDS_TEST_INFO           "You will get an error text in approximately 1 minute (depending on your network capabilities) if an error occurs."
+    IDS_INSTALL_SUCCESSFUL  "Installation successful"
+    IDS_INSTALL_START_CONTROL_CENTER 
+                            "Installation has been completed successfully.\nDo you want to start the ZetaGrid Control Center?"
+    IDS_INSTALL_COMPLETED_SUCCESSFULLY 
+                            "Installation has been completed successfully."
+    IDS_INSTALL_CONTINUE    "Do you want to continue the installation?"
+    IDS_INSTALL             "Install ZetaGrid"
+    IDS_INSTALL_SHORTCUT_STARTUP 
+                            "Should the program start automatically whenever Windows starts up? (creates a shortcut in the startup menu)"
+    IDS_EMAIL_NOT_VALID     "The e-mail address is not valid."
+    IDS_OVERWRITE_FILE      "Overwrite file?"
+    IDS_OVERWRITE_WITH_NEW_CONFIG 
+                            "Do you want to overwrite the file '%s' with the new configuration?"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PACKAGE_SIZE_INFO   "The work unit size cannot be changed immediately since local work units exist. But all new work units will have the changed size."
+    IDS_TIMEFRAME_ENDS_AFTER_BEGINS 
+                            "The end of the timeframe (%s, no. %d) must be after the begin."
+    IDS_TF2_BEGINS_AFTER_TF1_ENDS 
+                            "The begin of the second timeframe of %s must be after the end of the first timeframe."
+    IDS_TF3_BEGINS_AFTER_TF2_ENDS 
+                            "The begin of the third timeframe of %s must be after the end of the second timeframe."
+    IDS_TEST_THIS_CONFIGURATION "Do you want to test this configuration?"
+    IDS_TEST                "Test"
+    IDS_TEST_RUNNING        "Test running:"
+    IDS_UPDATE_CLIENT       "Please update your client!"
+    IDS_STOP_CONTROL_CENTER "Please close the running ZetaGrid Control Center and restart the installation."
+    IDS_CHANGE_LOCAL_CFG    "Please change your local configuration equal to your server configuration."
+    IDS_PROCESSORS_SMALLER_1 "The number of processors will be changed to 1."
+    IDS_JAVA_LIB            "The specified library ""%s"" may be not work properly.\nTry the ""classic\\jvm.dll"" or the command line mode."
+    IDS_CPU_USAGE_BETWEEN_0_100 
+                            "The CPU usage during the timeframe (%s, no. %d) must be between 0 and 100%."
+END
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROPPAGE_PROCESS DIALOG DISCARDABLE  0, 0, 352, 148
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Resources"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "OS priority",IDC_STATIC_PRIORITY,16,18,45,12,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_PRIO,91,18,43,39,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Resources",IDC_STATIC,16,42,40,11,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_RESOURCES,91,42,227,43,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "CPU usage",IDC_STATIC,16,65,43,11,SS_CENTERIMAGE
+    LTEXT           "Low",IDC_STATIC,91,65,14,11,SS_CENTERIMAGE
+    CONTROL         "Slider1",IDC_SLIDER_CPU_USAGE,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,109,
+                    65,216,11
+    LTEXT           "High",IDC_STATIC,329,65,16,11,SS_CENTERIMAGE
+    LTEXT           "Used processors",IDC_STATIC,16,88,64,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_PROZESSOREN,91,88,13,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_TRANSFER_DETECT,16,116,20,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Seconds to check connection and transfer results asynchronously (0 deactivate this function)",
+                    IDC_STATIC_TRANSFER_DETECT,43,114,302,9,SS_CENTERIMAGE
+    LTEXT           "This value must be greater than or equal to 300 seconds.",
+                    IDC_STATIC,43,124,180,8
+    LTEXT           "It is not exact to the real CPU usage.",IDC_STATIC,166,
+                    75,116,8
+END
+
+IDD_PROPPAGE_WORK_UNIT DIALOG DISCARDABLE  0, 0, 352, 148
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Work Unit"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Task name",IDC_STATIC,16,25,73,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_TASK_NAME,92,25,235,30,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Size of one work unit",IDC_STATIC,16,48,73,12,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_PACKAGE_SIZE,92,48,110,73,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "(estimates are made on Pentium IV 2 GHz, April 2003)",
+                    IDC_STATIC,92,63,169,14,SS_CENTERIMAGE
+    PUSHBUTTON      "Info",IDC_BUTTON_NOTE_SIZE_OF_WORK_UNIT,277,63,50,14
+    LTEXT           "Number of work units",IDC_STATIC,16,86,73,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_PACKAGES,92,86,13,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "(every work unit expires after 7 days)",IDC_STATIC,113,
+                    86,148,14,SS_CENTERIMAGE
+    PUSHBUTTON      "Info",IDC_BUTTON_NOTE_NUMBER_OF_WORK_UNITS,277,86,50,14
+    CONTROL         "Complete all local work units and do not request new work units",
+                    IDC_COMPLETE_ALL_LOCAL_WU,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,110,215,10
+END
+
+IDD_PROPPAGE_GENERAL DIALOG DISCARDABLE  0, 0, 352, 148
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "General"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Name",IDC_STATIC,13,16,20,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_NAME,49,16,233,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Info",IDC_BUTTON_NOTE_NAME,293,16,50,14
+    LTEXT           "&e-Mail",IDC_STATIC,13,40,20,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_EMAIL,49,40,233,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Info",IDC_BUTTON_NOTE_EMAIL,293,40,50,14
+    CONTROL         "Receive important ZetaGrid related announcements. Do not worry, this will rarely happen.",
+                    IDC_CHECK_MESSAGES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    13,64,327,10
+    CONTROL         "Team",IDC_CHECK_TEAM,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,84,34,14
+    EDITTEXT        IDC_EDIT_TEAMNAME,49,84,233,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    PUSHBUTTON      "Info",IDC_BUTTON_NOTE_TEAMNAME,293,84,50,14
+    LTEXT           "All awards (see http://www.zetagrid.net/zeta/prizes.html) will be offered only to correctly registered users.",
+                    IDC_STATIC,14,133,331,8
+    CONTROL         "These general values are changed at server.",
+                    IDC_VALUES_CHANGED_AT_SERVER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,110,108,160,14
+    PUSHBUTTON      "Change at server",IDC_BUTTON_CHANGE_AT_SERVER,13,108,76,
+                    14
+END
+
+IDD_PROPPAGE_OPTION DIALOG DISCARDABLE  0, 0, 352, 148
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Java VM",IDC_STATIC,16,15,29,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_JAVA_VM,52,15,216,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_VM_CHOOSE,278,15,50,14
+    LTEXT           "Java Lib",IDC_STATIC_JAVA_LIB,16,52,29,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_JAVA_LIB,52,52,216,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_LIB_CHOOSE,278,52,50,14
+    LTEXT           "Root path",IDC_STATIC,16,89,33,14,SS_CENTERIMAGE | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_ROOT_PATH,52,89,216,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    PUSHBUTTON      "Browse",IDC_BUTTON_ROOT_BROWSE,278,89,50,14,WS_DISABLED
+    GROUPBOX        "Screen saver",IDC_STATIC,16,115,122,26
+    CONTROL         "Display Status",IDC_CHECK_DISPLAY_ST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,23,125,61,10
+    GROUPBOX        "Control Center",IDC_STATIC,202,115,133,26
+    CONTROL         "Include icon in the taskbar tray",IDC_CHECK_SYSTEM_TRAY,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,211,125,113,10
+END
+
+IDD_PROPPAGE_CONNECTION DIALOG DISCARDABLE  0, 0, 352, 148
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Connection"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Use a proxy server for HTTP",IDC_CHECK_USE_PROXY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,16,106,14
+    LTEXT           "Address",IDC_STATIC_PROXY_ADDRESS,130,16,26,14,
+                    SS_CENTERIMAGE | WS_DISABLED
+    EDITTEXT        IDC_EDIT_PROXY_ADDRESS,164,16,93,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    LTEXT           "Port",IDC_STATIC_PROXY_PORT,267,16,14,14,SS_CENTERIMAGE | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_PROXY_PORT,287,16,30,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER | WS_DISABLED
+    CONTROL         "Proxy authentication",IDC_CHECK_PROXY_AUTHENTICATION,
+                    "Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,13,
+                    48,80,14
+    LTEXT           "Username",IDC_STATIC_USERNAME,123,48,33,14,
+                    SS_CENTERIMAGE | WS_DISABLED
+    EDITTEXT        IDC_EDIT_USERNAME,164,48,93,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    LTEXT           "Password",IDC_STATIC_PASSWORD,124,74,32,14,
+                    SS_CENTERIMAGE | WS_DISABLED
+    EDITTEXT        IDC_EDIT_PASSWORD,164,73,93,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Note: The password will be stored as plain text in the configuration file.",
+                    IDC_STATIC,124,99,222,8
+    CONTROL         "Check the connection to the server before the client will be restarted",
+                    IDC_CHECK_CONNECTION_TO_SERVER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,121,231,10
+END
+
+IDD_PROPPAGE_POWER DIALOG DISCARDABLE  0, 0, 352, 148
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Scheduling"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "Begins",IDC_STATIC,32,7,37,8
+    CTEXT           "Ends",IDC_STATIC,70,7,37,8
+    LTEXT           "CPU",IDC_STATIC,113,7,16,8
+    CTEXT           "Begins",IDC_STATIC,137,7,37,8
+    CTEXT           "Ends",IDC_STATIC,175,7,37,8
+    LTEXT           "CPU",IDC_STATIC,218,7,16,8
+    CTEXT           "Begins",IDC_STATIC,242,7,37,8
+    CTEXT           "Ends",IDC_STATIC,280,7,37,8
+    LTEXT           "CPU",IDC_STATIC,323,7,16,8
+    LTEXT           "Mo",IDC_STATIC,17,16,11,15,SS_CENTERIMAGE
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_MO1,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,32,16,37,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_MO2,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,70,16,37,15
+    EDITTEXT        IDC_CPU_USAGE_MO1,108,16,17,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "%",IDC_STATIC,127,16,8,15,SS_CENTERIMAGE
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_MO3,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,137,16,37,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_MO4,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,175,16,37,15
+    EDITTEXT        IDC_CPU_USAGE_MO2,213,16,17,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "%",IDC_STATIC,232,16,8,15,SS_CENTERIMAGE
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_MO5,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,242,16,37,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_MO6,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,280,16,37,15
+    EDITTEXT        IDC_CPU_USAGE_MO3,318,16,17,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "%",IDC_STATIC,337,16,8,15,SS_CENTERIMAGE
+    LTEXT           "Tu",IDC_STATIC,17,31,11,15,SS_CENTERIMAGE
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_TU1,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,32,31,37,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_TU2,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,70,31,37,15
+    EDITTEXT        IDC_CPU_USAGE_TU1,108,31,17,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_TU3,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,137,31,37,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_TU4,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,175,31,37,15
+    EDITTEXT        IDC_CPU_USAGE_TU2,213,31,17,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_TU5,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,242,31,37,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_TU6,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,280,31,37,15
+    EDITTEXT        IDC_CPU_USAGE_TU3,318,31,17,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "%",IDC_STATIC,337,31,8,15,SS_CENTERIMAGE
+    LTEXT           "We",IDC_STATIC,17,46,11,15,SS_CENTERIMAGE
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_WE1,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,32,46,37,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_WE2,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,70,46,37,15
+    EDITTEXT        IDC_CPU_USAGE_WE1,108,46,17,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_WE3,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,137,46,37,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_WE4,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,175,46,37,15
+    EDITTEXT        IDC_CPU_USAGE_WE2,213,46,17,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_WE5,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,242,46,37,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_WE6,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,280,46,37,15
+    EDITTEXT        IDC_CPU_USAGE_WE3,318,46,17,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "%",IDC_STATIC,337,46,8,15,SS_CENTERIMAGE
+    LTEXT           "Th",IDC_STATIC,17,61,11,15,SS_CENTERIMAGE
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_TH1,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,32,61,37,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_TH2,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,70,61,37,15
+    EDITTEXT        IDC_CPU_USAGE_TH1,108,61,17,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_TH3,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,137,61,37,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_TH4,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,175,61,37,15
+    EDITTEXT        IDC_CPU_USAGE_TH2,213,61,17,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_TH5,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,242,61,37,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_TH6,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,280,61,37,15
+    EDITTEXT        IDC_CPU_USAGE_TH3,318,61,17,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "%",IDC_STATIC,337,61,8,15,SS_CENTERIMAGE
+    LTEXT           "Fr",IDC_STATIC,17,76,11,15,SS_CENTERIMAGE
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_FR1,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,32,76,37,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_FR2,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,70,76,37,15
+    EDITTEXT        IDC_CPU_USAGE_FR1,108,76,17,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_FR3,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,137,76,37,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_FR4,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,175,76,37,15
+    EDITTEXT        IDC_CPU_USAGE_FR2,213,76,17,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_FR5,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,242,76,37,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_FR6,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,280,76,37,15
+    EDITTEXT        IDC_CPU_USAGE_FR3,318,76,17,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "%",IDC_STATIC,337,76,8,15,SS_CENTERIMAGE
+    LTEXT           "Sa",IDC_STATIC,17,91,11,15,SS_CENTERIMAGE
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_SA1,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,32,91,37,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_SA2,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,70,91,37,15
+    EDITTEXT        IDC_CPU_USAGE_SA1,108,91,17,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_SA3,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,137,91,37,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_SA4,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,175,91,37,15
+    EDITTEXT        IDC_CPU_USAGE_SA2,213,91,17,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_SA5,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,242,91,37,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_SA6,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,280,91,37,15
+    EDITTEXT        IDC_CPU_USAGE_SA3,318,91,17,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "%",IDC_STATIC,337,91,8,15,SS_CENTERIMAGE
+    LTEXT           "Su",IDC_STATIC,17,106,11,15,SS_CENTERIMAGE
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_SU1,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,32,106,37,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_SU2,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,70,106,37,15
+    EDITTEXT        IDC_CPU_USAGE_SU1,108,106,17,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_SU3,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,137,106,37,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_SU4,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,175,106,37,15
+    EDITTEXT        IDC_CPU_USAGE_SU2,213,106,17,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_SU5,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,242,106,37,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_SU6,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    DTS_APPCANPARSE | WS_TABSTOP | 0x8,280,106,37,15
+    EDITTEXT        IDC_CPU_USAGE_SU3,318,106,17,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "%",IDC_STATIC,337,106,8,15,SS_CENTERIMAGE
+    CONTROL         "Prevent computation when my computer is running on battery power",
+                    IDC_BATTERY_MODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,
+                    123,437,10
+    LTEXT           "(works only with an active control center or in screen saver mode)",
+                    IDC_STATIC,19,133,207,8
+    LTEXT           "%",IDC_STATIC,127,31,8,15,SS_CENTERIMAGE
+    LTEXT           "%",IDC_STATIC,127,46,8,15,SS_CENTERIMAGE
+    LTEXT           "%",IDC_STATIC,127,61,8,15,SS_CENTERIMAGE
+    LTEXT           "%",IDC_STATIC,127,76,8,15,SS_CENTERIMAGE
+    LTEXT           "%",IDC_STATIC,127,91,8,15,SS_CENTERIMAGE
+    LTEXT           "%",IDC_STATIC,127,106,8,15,SS_CENTERIMAGE
+    LTEXT           "%",IDC_STATIC,232,31,8,15,SS_CENTERIMAGE
+    LTEXT           "%",IDC_STATIC,232,46,8,15,SS_CENTERIMAGE
+    LTEXT           "%",IDC_STATIC,232,61,8,15,SS_CENTERIMAGE
+    LTEXT           "%",IDC_STATIC,232,76,8,15,SS_CENTERIMAGE
+    LTEXT           "%",IDC_STATIC,232,91,8,15,SS_CENTERIMAGE
+    LTEXT           "%",IDC_STATIC,232,106,8,15,SS_CENTERIMAGE
+END
+
+IDD_PROPPAGE_LOGGING DIALOG DISCARDABLE  0, 0, 352, 148
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Logging"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Name of the event log file",IDC_STATIC,16,17,82,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_EVENT_LOG_FILE,165,17,146,14,ES_AUTOHSCROLL
+    LTEXT           "Format of the timestamp",IDC_STATIC,16,43,76,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_EVENT_FORMAT_TIMESTAMP,165,43,146,14,
+                    ES_AUTOHSCROLL
+    LTEXT           "Size of the event log file",IDC_STATIC,16,69,76,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_EVENT_LOG_FILE_SIZE,165,69,40,14,ES_AUTOHSCROLL
+    LTEXT           "(e.g. 50kB, 2MB, or 1GB)",IDC_STATIC,217,69,81,14,
+                    SS_CENTERIMAGE
+    LTEXT           "Number of backup files of the event log files",
+                    IDC_STATIC,16,95,139,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_EVENT_NUMBER_BACKUP,165,95,40,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Put all imformation also on standard output stream",
+                    IDC_CHECK_STD_OUTPUT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,121,171,10
+END
+
+IDD_PROPPAGE_SECURITY DIALOG DISCARDABLE  0, 0, 352, 148
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Security"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Encrypts the URL of every connection to a server, e.g. no e-mail address will be sent as plain text",
+                    IDC_ENCRYPTS_URL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    18,16,321,10
+    CONTROL         "Trust all users",IDC_TRUST_ALL_USER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,18,44,59,10
+    LTEXT           "Trusted users (that generated the download files)",
+                    IDC_STATIC,18,59,154,8
+    EDITTEXT        IDC_EDIT_TRUSTED_USERS,18,71,312,14,ES_AUTOHSCROLL
+    LTEXT           "Specify user names separated by comma.",IDC_STATIC,18,
+                    89,132,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_PROPPAGE_PROCESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 345
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+
+    IDD_PROPPAGE_WORK_UNIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 345
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+
+    IDD_PROPPAGE_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 345
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+
+    IDD_PROPPAGE_OPTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 345
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+
+    IDD_PROPPAGE_CONNECTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 345
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+
+    IDD_PROPPAGE_POWER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 345
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+
+    IDD_PROPPAGE_LOGGING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 345
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+
+    IDD_PROPPAGE_SECURITY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 345
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_PROPPAGE_PROCESS DLGINIT
+BEGIN
+    IDC_COMBO_PRIO, 0x403, 7, 0
+0x6f6e, 0x6d72, 0x6c61, "\000" 
+    IDC_COMBO_PRIO, 0x403, 4, 0
+0x6f6c, 0x0077, 
+    IDC_COMBO_RESOURCES, 0x403, 40, 0
+0x7375, 0x6e69, 0x2067, 0x6261, 0x756f, 0x2074, 0x3733, 0x4d20, 0x2042, 
+0x616d, 0x6e69, 0x6d20, 0x6d65, 0x726f, 0x2079, 0x6428, 0x6665, 0x7561, 
+0x746c, 0x0029, 
+    IDC_COMBO_RESOURCES, 0x403, 45, 0
+0x7375, 0x6e69, 0x2067, 0x6261, 0x756f, 0x2074, 0x3534, 0x4d20, 0x2042, 
+0x616d, 0x6e69, 0x6d20, 0x6d65, 0x726f, 0x2079, 0x7e28, 0x3420, 0x2530, 
+0x6620, 0x7361, 0x6574, 0x2972, "\000" 
+    IDC_COMBO_RESOURCES, 0x403, 45, 0
+0x7375, 0x6e69, 0x2067, 0x6261, 0x756f, 0x2074, 0x3135, 0x4d20, 0x2042, 
+0x616d, 0x6e69, 0x6d20, 0x6d65, 0x726f, 0x2079, 0x7e28, 0x3720, 0x2530, 
+0x6620, 0x7361, 0x6574, 0x2972, "\000" 
+    IDC_COMBO_RESOURCES, 0x403, 46, 0
+0x7375, 0x6e69, 0x2067, 0x6261, 0x756f, 0x2074, 0x3538, 0x4d20, 0x2042, 
+0x616d, 0x6e69, 0x6d20, 0x6d65, 0x726f, 0x2079, 0x7e28, 0x3120, 0x3030, 
+0x2025, 0x6166, 0x7473, 0x7265, 0x0029, 
+    0
+END
+
+IDD_PROPPAGE_WORK_UNIT DLGINIT
+BEGIN
+    IDC_COMBO_TASK_NAME, 0x403, 39, 0
+0x6556, 0x6972, 0x6966, 0x6163, 0x6974, 0x6e6f, 0x6f20, 0x2066, 0x6874, 
+0x2065, 0x6952, 0x6d65, 0x6e61, 0x206e, 0x7948, 0x6f70, 0x6874, 0x7365, 
+0x7369, "\000" 
+    IDC_COMBO_PACKAGE_SIZE, 0x403, 26, 0
+0x6974, 0x796e, 0x7720, 0x726f, 0x206b, 0x6e75, 0x7469, 0x7e20, 0x2020, 
+0x2032, 0x6f68, 0x7275, 0x0073, 
+    IDC_COMBO_PACKAGE_SIZE, 0x403, 27, 0
+0x6d73, 0x6c61, 0x206c, 0x6f77, 0x6b72, 0x7520, 0x696e, 0x2074, 0x207e, 
+0x3420, 0x6820, 0x756f, 0x7372, "\000" 
+    IDC_COMBO_PACKAGE_SIZE, 0x403, 27, 0
+0x656d, 0x6964, 0x6d75, 0x7720, 0x726f, 0x206b, 0x6e75, 0x7469, 0x7e20, 
+0x3620, 0x6820, 0x756f, 0x7372, "\000" 
+    IDC_COMBO_PACKAGE_SIZE, 0x403, 27, 0
+0x616c, 0x6772, 0x2065, 0x6f77, 0x6b72, 0x7520, 0x696e, 0x2074, 0x207e, 
+0x3820, 0x6820, 0x756f, 0x7372, "\000" 
+    IDC_COMBO_PACKAGE_SIZE, 0x403, 27, 0
+0x7568, 0x6567, 0x7720, 0x726f, 0x206b, 0x6e75, 0x7469, 0x7e20, 0x2020, 
+0x3231, 0x6820, 0x756f, 0x7372, "\000" 
+    0
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\Saver.rc2"  // non-Microsoft Visual C++ edited resources
+
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+#include "afxres.rc"  // Standard components
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

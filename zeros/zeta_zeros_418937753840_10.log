@@ -1,0 +1,72 @@
+This run (LASTN=418937753840, NRANGE=10, MDIMENS=136036, VERSION=0141) was started at Fri Jul 16 23:08:04 2004
+Initial Gram point G(418937753839)=116259811951.402
+Call search3a(4) between 116259811952.199 and 116259811952.465 to find 3 zeros.
+Call search3a(4) between 116259811951.934 and 116259811952.199 to find 3 zeros.
+Call search2b between 116259811952.731 and 116259811953.263.
+Call search2c between 116259811952.731 and 116259811952.997.
+Call search2d between 116259811952.731 and 116259811952.997.
+Call searchND(2) between 116259811952.731 and 116259811952.731, h=1.19209289550781e-007.
+Call search2c between 116259811952.997 and 116259811953.263.
+Call search2d between 116259811952.997 and 116259811953.263.
+Call the new rule for a Gram block of length 4.
+ i=0, t=116259811951.668, z=1.24568404438768, #zeros=0
+ i=1, t=116259811951.934, z=0.0231345329704486, #zeros=0
+ i=2, t=116259811952.199, z=-0.0727681787610692, #zeros=3
+ i=3, t=116259811952.465, z=0.100524126424966, #zeros=1
+ i=4, t=116259811952.731, z=0.0264099327874975, #zeros=0
+Call search3a(4) between 116259811952.199 and 116259811952.465 to find 3 zeros.
+Call search3a(8) between 116259811952.199 and 116259811952.465 to find 3 zeros.
+Call search3a(16) between 116259811952.199 and 116259811952.465 to find 3 zeros.
+Call search3a(32) between 116259811952.199 and 116259811952.465 to find 3 zeros.
+Call search3a(64) between 116259811952.199 and 116259811952.465 to find 3 zeros.
+.... Call sumMZ at 116259811952.453, MZ=-0.54350592282499e-3,-0.54350592282455e-3
+Call search2c between 116259811952.444 and 116259811952.453.
+.... Call sumMZ at 116259811952.451, MZ=-0.16111269561697e-1,-0.16111269561696e-1
+Call search3a(128) between 116259811952.199 and 116259811952.465 to find 3 zeros.
+.... Call sumMZ at 116259811952.451, MZ=-0.16111269561697e-1,-0.16111269561696e-1
+Call search2c between 116259811952.446 and 116259811952.451.
+Call search3a(256) between 116259811952.199 and 116259811952.465 to find 3 zeros.
+.... Call sumMZ at 116259811952.452, MZ=-0.83339661742116e-2,-0.83339661742111e-2
+Call search2c between 116259811952.449 and 116259811952.452.
+.... Call sumMZ at 116259811952.451, MZ=-0.12224359576953e-1,-0.12224359576952e-1
+Call search2d between 116259811952.449 and 116259811952.452.
+.... Call sumMZ at 116259811952.451, MZ=-0.14168262106488e-1,-0.14168262106487e-1
+.... Call sumMZ at 116259811952.451, MZ=-0.10279586184922e-1,-0.10279586184921e-1
+.... Call sumMZ at 116259811952.451, MZ=-0.15197026145613e-1,-0.15197026145613e-1
+.... Call sumMZ at 116259811952.451, MZ=-0.13253594464994e-1,-0.13253594464993e-1
+.... Call sumMZ at 116259811952.451, MZ=-0.11309279099847e-1,-0.11309279099846e-1
+.... Call sumMZ at 116259811952.451, MZ=-0.93641042770934e-2,-0.93641042770930e-2
+.... Call sumMZ at 116259811952.45, MZ=-0.16911065643960e-1,-0.16911065643960e-1
+.... Call sumMZ at 116259811952.45, MZ=-0.16682568480039e-1,-0.16682568480039e-1
+.... Call sumMZ at 116259811952.45, MZ=-0.16454058494499e-1,-0.16454058494499e-1
+.... Call sumMZ at 116259811952.451, MZ=-0.16225535726674e-1,-0.16225535726673e-1
+.... Call sumMZ at 116259811952.451, MZ=-0.15997000215902e-1,-0.15997000215901e-1
+.... Call sumMZ at 116259811952.451, MZ=-0.15768452001530e-1,-0.15768452001529e-1
+.... Call sumMZ at 116259811952.451, MZ=-0.15539891122910e-1,-0.15539891122909e-1
+.... Call sumMZ at 116259811952.451, MZ=-0.15311317619400e-1,-0.15311317619400e-1
+Call searchND(2) between 116259811952.45 and 116259811952.45, h=9.5367431640625e-007.
+.... Call sumMZ at 116259811952.45, MZ=-0.17025309405523e-1,-0.17025309405523e-1
+Call search2c between 116259811951.668 and 116259811951.934.
+Call search2d between 116259811951.668 and 116259811951.934.
+Call search2c between 116259811952.465 and 116259811952.731.
+.... Call sumMZ at 116259811952.706, MZ=-0.10627250445718e-1,-0.10627250445718e-1
+The new rule found two additional sign changes in previous Gram block.
+NFIRST (was input for this run)          = 418937753840
+LASTN (input for next run)               = 418937753850
+the corresponding Gram point             = 116259811954.06
+nzevalu (number of Z-evaluations)        = 2640
+ndzevalu (number of DZ-evaluations)      = 21
+ecorate                                  = 266.1
+average time for one Z-evaluation        = 0.0146280303030303
+average time for one DZ-evaluation       = 1.06904761904762
+total time used for all Z-evaluations    = 38.618
+total time used for all DZ-evaluations   = 22.45
+total time used in this run              = 61.288
+average total time for one Z-evaluation  = 0.0230319428786171
+last m (= summation range in Z(t))       = 136026.922906544
+first line                               = 1.116259811951.668
+last line                                = 1.116259811954.06
+reduction                                = 11625981195
+the starting Gram point                  = 418937753840
+number of lines                          = 12
+@

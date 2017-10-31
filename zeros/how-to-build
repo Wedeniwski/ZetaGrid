@@ -1,0 +1,56 @@
+How to build the library for separating zeros of the Riemann zeta function
+--------------------------------------------------------------------------
+
+Prerequisite: ZIP tool, C++ compiler,
+              the Java Native Interface (JNI) include files,
+              and the files 'ZetaGrid.zip' and 'zeta_zeros_test_cases.zip'
+              which are available at
+              http://www.zetagrid.net/zeta/sourcecode.html
+
+
+1. Unzip the package 'ZetaGrid.zip' in another new folder (e.g. 'zeta')
+2. Change to the folder 'zeta'
+3. Change the name and the options of your C++ compiler and define the
+   folder name of your JNI in the 'makefile' (there exist some examples).
+   - The option -D_BIG_ENDIAN_ must be defined for processors with the
+     big endian byte order, e.g. PowerPC.
+   - The option -D_DEFINE_ATOLL_ should be defined for some compilers
+     (only if you get compiler errors without this option).
+   - The option -D_DEFINE_SLEEP_ must be defined for some compilers
+     to define the function sleep.
+   - The option -D_FAST_CONVERSION_ may speed-up the performance of the
+     calculation. Check this option in combination with step 7.
+     This option does not work on a processor with the big endian byte
+     order.
+   - The option -D_FAST_MOD_ may speed-up the performance of the
+     calculation. Check this option in combination with step 7.
+   - The option -Dx86 must be defined for x86 processors since the
+     doubledouble package needs it.
+   - The option -D_STATISTIC_FILE_ is only for internal usage
+     and should not be defined because the code does not work with
+     every compiler.
+   
+
+4. Call 'make' or 'nmake' (for Windows)
+5. The command 'trydd' should be called automatically if the build was
+   successfully. This command should generate the following output:
+
+Base and precision determination by Linnainmaa's method:
+Type double: base is 2,  precision is 53
+Type doubledouble:   base is 2,  precision is 108
+
+I/O conversion tests: verify values by eyeball
+This should be 0.333333333: 0.333333333
+This should be 0.333333333e-4: 0.333333333e-4
+This should be 3.33333333e8: 3.333333330000000000000000000000e8
+This should be 3.33333333e20: 3.333333330000000000000000000000e20
+This should be -3.333333333333e8: -3.333333333333e8
+This should be -3.3333333333e4: -3.333333333300000000000000000000e4
+
+The remainder of the tests will be silent if successful.
+
+
+6. Unzip the package 'zeta_zeros_test_cases.zip'
+7. Check the test cases (see Readme of the test package)
+8. Optionally, you could send feedback to Sebastian Wedeniwski
+   (wedeniws@de.ibm.com) about your new library.

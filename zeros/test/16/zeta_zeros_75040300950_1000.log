@@ -1,0 +1,30 @@
+This run (LASTN=75040300950, NRANGE=1000, MDIMENS=59791, VERSION=0132) was started at Sun Dec 01 12:54:45 2002
+Initial Gram point G(75040300949)=22455303689.449
+.... Call sumMZ at 22455303691.448, MZ=-0.1753183626178e-3,-0.1753183626173e-3
+Call search2b between 22455303691.163 and 22455303691.734.
+.... Call sumMZ at 22455303691.453, MZ=-0.1452625942530e-3,-0.1452625942525e-3
+Call search2c between 22455303691.163 and 22455303691.448.
+Call search2d between 22455303691.163 and 22455303691.448.
+.... Call sumMZ at 22455303691.447, MZ=-0.6496491883054e-3,-0.6496491883049e-3
+.... Call sumMZ at 22455303691.447, MZ=-0.6129077694116e-3,-0.6129077694111e-3
+.... Call sumMZ at 22455303691.447, MZ=-0.7584067638995e-3,-0.7584067638990e-3
+.... Call sumMZ at 22455303691.447, MZ=-0.4791298069848e-3,-0.4791298069843e-3
+.... Call sumMZ at 22455303691.448, MZ=-0.2467514923015e-3,-0.2467514923011e-3
+Call search2c between 22455303691.448 and 22455303691.734.
+.... Call sumMZ at 22455303691.449, MZ=-0.6586157838441e-5,-0.6586157837996e-5
+.... Call sumMZ at 22455303691.45, MZ=0.1903243411122e-3,0.1903243411127e-3
+.... Call sumMZ at 22455303757.931, MZ=-0.4801551729041e-3,-0.4801551729037e-3
+NFIRST (was input for this run)          = 75040300950
+LASTN (input for next run)               = 75040301950
+the corresponding Gram point             = 22455303975.088
+nzevalu (number of Z-evaluations)        = 2393
+ndzevalu (number of DZ-evaluations)      = 10
+ecorate                                  = 2.403
+average time for one Z-evaluation        = 0.011065190137902
+average time for one DZ-evaluation       = 0.6098
+total time used for all Z-evaluations    = 26.479
+total time used for all DZ-evaluations   = 6.098
+total time used in this run              = 32.617
+average total time for one Z-evaluation  = 0.013573449854349
+last m (= summation range in Z(t))       = 59781.875399375
+@

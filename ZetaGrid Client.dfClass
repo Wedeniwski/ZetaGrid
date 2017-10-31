@@ -1,0 +1,113 @@
+package idi543i0d3hrri76d3hrt4dk;
+
+/**
+@version 2.0
+@__modelType diagram 
+*/
+class diagram {
+/**
+@__ref <oiref:java#Class#zeta.Workload:oiref><oihard>
+@__modelType reference
+@__imported 
+*/
+class reference {
+}/**
+@__ref <oiref:java#Class#zeta.WorkUnitManager:oiref><oihard>
+@__modelType reference
+@__imported 
+*/
+class reference18 {
+}/**
+@__ref <oiref:java#Class#zeta.WorkUnit:oiref><oihard>
+@__modelType reference
+@__imported 
+*/
+class reference19 {
+}/**
+@__ref <oiref:java#Class#zeta.Task:oiref><oihard>
+@__modelType reference
+@__imported 
+*/
+class reference20 {
+}/**
+@__ref <oiref:java#Class#zeta.HardwareSimulationTask:oiref><oihard>
+@__modelType reference
+@__imported 
+*/
+class reference21 {
+}/**
+@__ref <oiref:java#Class#zeta.HardwareSimulationWorkUnit:oiref><oihard>
+@__modelType reference
+@__imported 
+*/
+class reference22 {
+}/**
+@__ref <oiref:java#Class#zeta.TaskManager:oiref><oihard>
+@__modelType reference
+@__imported 
+*/
+class reference23 {
+}/**
+@__ref <oiref:java#Class#zeta.ZetaClient:oiref><oihard>
+@__modelType reference
+@__imported 
+*/
+class reference24 {
+}/**
+@__ref <oiref:java#Class#zeta.ZetaProperties:oiref><oihard>
+@__modelType reference
+@__imported 
+*/
+class reference25 {
+}/**
+@__ref <oiref:java#Class#zeta.ZetaTask:oiref><oihard>
+@__modelType reference
+@__imported 
+*/
+class reference26 {
+}/**
+@__ref <oiref:java#Class#zeta.ZetaWorkUnit:oiref><oihard>
+@__modelType reference
+@__imported 
+*/
+class reference27 {
+}}/**
+@__tags
+@shapeType ClassDiagram 
+*/
+class __tags {
+}/**
+@__options 
+*/
+class __options {
+}/**
+@__positions <oigroup:<oiref:java#Class#zeta.ZetaProperties:oiref>=742,96,203,169,1:oigroup>
+<oigroup:<oiref:java#Implements#zeta.ZetaWorkUnit#zeta.WorkUnit:oiref>=1028,999,1028,935:oigroup>
+<oigroup:MemberLink#<oiref:java#Member#zeta.WorkUnitManager#task:oiref>=1148,303,1148,160:oigroup>
+<oigroup:<oiref:java#Class#zeta.HardwareSimulationTask:oiref>=1298,659,275,111,0:oigroup>
+<oigroup:MemberLink#<oiref:java#Member#zeta.ZetaClient#properties:oiref>=832,555,832,265:oigroup>
+<oigroup:<oiref:java#Extends#zeta.HardwareSimulationTask#zeta.Task:oiref>=1352,659,1352,160:oigroup>
+<oigroup:<oiref:java#Class#zeta.Workload:oiref>=404,358,287,98,0:oigroup>
+<oigroup:MemberLink#<oiref:java#Member#zeta.WorkUnitManager#properties:oiref>=1050,303,888,265:oigroup>
+<oigroup:<oiref:java#Class#zeta.WorkUnitManager:oiref>=953,303,312,271,0:oigroup>
+<oigroup:MemberLink#<oiref:java#Member#zeta.Workload#properties:oiref>=614,358,787,265:oigroup>
+<oigroup:MemberLink#<oiref:java#Member#zeta.ZetaClient#lnkWorkload:oiref>=499,555,499,456:oigroup>
+<oigroup:<oiref:java#Class#zeta.ZetaWorkUnit:oiref>=773,999,314,264,0:oigroup>
+<oigroup:<oiref:java#Class#zeta.TaskManager:oiref>=527,34,198,77,1:oigroup>
+<oigroup:<oiref:java#Class#zeta.HardwareSimulationWorkUnit:oiref>=1128,998,304,264,0:oigroup>
+<oigroup:<oiref:java#Class#zeta.WorkUnit:oiref>=969,657,296,278,0:oigroup>
+<oigroup:<oiref:java#Implements#zeta.HardwareSimulationWorkUnit#zeta.WorkUnit:oiref>=1196,998,1196,935:oigroup>
+<oigroup:MemberLink#<oiref:java#Member#zeta.Task#properties:oiref>=1090,128,945,128:oigroup>
+<oigroup:MemberLink#<oiref:java#Member#zeta.WorkUnitManager#lnkWorkUnit:oiref>=1117,574,1117,657:oigroup>
+<oigroup:MemberLink#<oiref:java#Member#zeta.Workload#lnkTaskManager:oiref>=537,358,537,111:oigroup>
+<oigroup:<oiref:java#Class#zeta.Task:oiref>=1090,8,316,152,0:oigroup>
+<oigroup:MemberLink#<oiref:java#Member#zeta.Task#workUnitManager:oiref>=1206,160,1206,303:oigroup>
+<oigroup:<oiref:java#Class#zeta.ZetaTask:oiref>=1368,439,283,152,0:oigroup>
+<oigroup:<oiref:java#Class#zeta.ZetaClient:oiref>=396,555,517,237,0:oigroup>
+<oigroup:<oiref:java#Extends#zeta.ZetaTask#zeta.Task:oiref>=1387,439,1387,160:oigroup>
+<oigroup:MemberLink#<oiref:java#Member#zeta.TaskManager#lnkTask:oiref>=725,72,1090,72:oigroup>
+
+ 
+*/
+class __positions {
+}

@@ -1,0 +1,309 @@
+<project name="Zeta" default="all">
+  <target name="all" depends="clean,compile,jar,war,api"/>
+  
+  <target name="init">
+    <property name="compile.source"            value="src"/>
+    <property name="compile.destination"       value="classes"/>
+    <property name="compile.debug"             value="off"/>
+    <property name="compile.deprecation"       value="off"/>
+    <property name="compile.optimize"          value="on"/>
+    <property name="compile.depende.cachedir"  value="depend"/>
+    <property name="compile.classpath.servlet" value="d:\Compiler\servlet\servlet.jar"/>
+    
+    <property name="jar.client_stub"           value="zeta.jar"/>
+    <property name="jar.client"                value="zeta_client.jar"/>
+    <property name="jar.server"                value="zeta_server.jar"/>
+    <property name="jar.tools"                 value="zeta_tools.jar"/>
+    <property name="jar.compress"              value="true"/>
+    
+    <property name="war.destination"           value="zetagrid.war"/>
+    <property name="war.web_xml"               value="${compile.source}/zeta/web-nopassword.xml"/>
+    <property name="war.destination.html"      value="html"/>
+    <property name="war.destination.images"    value="images"/>
+    <property name="war.source.html"           value=""/>
+    <property name="war.source.images"         value="images"/>
+    
+    <property name="doc.packagefile"           value="doc/doc_packages"/>
+    <property name="doc.destination"           value="doc"/>
+    <property name="api.destination"           value="doc/api"/>
+
+    <property file="zeta_versions.cfg"/>
+  </target>
+  
+  <target name="clean" depends="init">
+    <delete dir="${compile.destination}"      quiet="true"/>
+    <delete dir="${compile.depende.cachedir}" quiet="true"/>
+    <delete dir="${doc.destination}"          quiet="true"/>
+  </target>
+  
+  <target name="compile" depends="init">
+    <mkdir dir="${compile.destination}"/>
+    <delete file="${compile.destination}/zeta/server/ZetaConstant.class" quiet="true"/>
+    <delete file="${compile.source}/zeta/server/ZetaConstant.java" quiet="true"/>
+    <copy file="private/zeta/server/ZetaConstant.java" tofile="${compile.source}/zeta/server/ZetaConstant.java"/>
+    <javac srcdir      ="${compile.source}"
+           destdir     ="${compile.destination}"
+           debug       ="${compile.debug}"
+           deprecation ="${compile.deprecation}"
+           optimize    ="${compile.optimize}">
+      <classpath>
+        <pathelement location="${compile.destination}"/>
+        <pathelement location="${compile.classpath.servlet}"/>
+      </classpath>
+    </javac>
+    <javac srcdir      ="."
+           destdir     ="${compile.destination}"
+           debug       ="${compile.debug}"
+           deprecation ="${compile.deprecation}"
+           optimize    ="${compile.optimize}">
+      <include name="NewVersion.java"/>
+    </javac>
+    <java classpath="${compile.destination}" classname="zeta.tool.ZetaCheckVersions"/>
+  </target>
+
+  <target name="api" depends="init">
+    <mkdir dir="${api.destination}"/>
+    <javadoc destdir      = "${api.destination}"
+             sourcepath   = "${compile.source}"
+             sourcefiles  = "${compile.source}/zeta/WorkUnit.java,${compile.source}/zeta/Task.java,${compile.source}/zeta/ClientTask.java,${compile.source}/zeta/ZetaInfo.java,${compile.source}/zeta/crypto/Key.java,${compile.source}/zeta/crypto/DefaultKey.java,${compile.source}/zeta/crypto/DefaultKeyEncrypt.java,${compile.source}/zeta/crypto/GenerateKey.java,${compile.source}/zeta/util/ThrowableHandler.java,${compile.source}/zeta/server/WorkUnitVerifier.java,${compile.source}/zeta/server/processor/TaskResultProcessor.java,${compile.source}/zeta/server/processor/TaskRequestWorkUnitProcessor.java,${compile.source}/zeta/server/processor/SimpleFileProcessor.java,${compile.source}/zeta/server/processor/DefaultWorkUnitProcessor.java,${compile.source}/zeta/server/processor/WorkUnitFileProcessor.java,${compile.source}/zeta/server/tool/CreateStatistics.java,${compile.source}/zeta/server/tool/Database.java,${compile.source}/zeta/server/tool/DatabaseBackup.java,${compile.source}/zeta/server/tool/DatabaseReorg.java,${compile.source}/zeta/server/tool/Daemon.java,${compile.source}/zeta/server/tool/GetData.java,${compile.source}/zeta/server/tool/NewVersion.java,${compile.source}/zeta/server/tool/ServerSynchronization.java,${compile.source}/zeta/server/tool/Trust.java"
+             private      = "false"
+             author       = "false"
+             splitindex   = "true"
+             failonerror  = "true"
+             Overview     = "src/overview.html"
+             Windowtitle  = "ZetaGrid v${client.cmd.version}">
+      <doctitle><![CDATA[ZetaGrid v${client.cmd.version}<br>API Specification]]></doctitle>
+      <header><![CDATA[<b>ZetaGrid v${client.cmd.version}</b>]]></header>
+      <footer><![CDATA[<b>ZetaGrid v${client.cmd.version}</b>]]></footer>
+      <bottom><![CDATA[<small>For further technical papers, see <a href="http://www.zetagrid.net/zeta/api.html">ZetaGrid Technical Documentation</a>.<br>&nbsp;<br>&#169 Copyright IBM Corp. 2004 All Rights Reserved.</small>]]></bottom>
+      <link offline="true" href="http://java.sun.com/j2se/1.3/docs/api/" packagelistLoc="D:\Program Files\IBM\jdk1.3\docs\api"/>
+    </javadoc>
+    <mkdir dir="${doc.destination}"/>
+    <copy file="html/ZetaGrid-Experiences_with_the_Grid_for_everybody_2003.pdf" tofile="${doc.destination}/ZetaGrid-Experiences_with_the_Grid_for_everybody_2003.pdf"/>
+    <copy file="papers/alphaWorks/ZetaGrid v.1.9.3-alpha.pdf" tofile="${doc.destination}/ZetaGrid v.1.9.3-alpha.pdf"/>
+    <copy file="papers/P2P/ZetaGrid-Springer (German).pdf" tofile="${doc.destination}/ZetaGrid-Springer (German).pdf"/>
+    <copy file="papers/ZetaSAT - Boolean SATisability Solving in a Desktop Grid Environment.pdf" tofile="${doc.destination}/ZetaSAT - Boolean SATisability Solving in a Desktop Grid Environment.pdf"/>
+  </target>
+
+  <target name="javadoc" depends="init">
+    <mkdir dir="${doc.destination}"/>
+    <delete file="${compile.destination}/zeta/server/ZetaConstant.class" quiet="true"/>
+    <delete file="${compile.source}/zeta/server/ZetaConstant.java" quiet="true"/>
+    <copy file="public/zeta/server/ZetaConstant.java" tofile="${compile.source}/zeta/server/ZetaConstant.java"/>
+    <javadoc destdir      ="${doc.destination}"
+             packagenames ="zeta.*"
+             private      ="true"
+             author       ="false"
+             splitindex   ="true"
+             failonerror  ="true"
+             Overview     ="src/overview.html"
+             Windowtitle  ="ZetaGrid v1.9">
+      <sourcepath>
+        <pathelement location="${compile.source}"/>
+      </sourcepath>
+      <doctitle><![CDATA[ZetaGrid v1.9<br>API Specification]]></doctitle>
+      <header><![CDATA[<b>ZetaGrid v1.9</b>]]></header>
+      <footer><![CDATA[<b>ZetaGrid v1.9</b>]]></footer>
+      <bottom><![CDATA[<small>For further technical papers, see <a href="http://www.zetagrid.net/zeta/api.html">ZetaGrid Technical Documentation</a>.<br>&nbsp;<br>&#169 Copyright IBM Corp. 2004 All Rights Reserved.</small>]]></bottom>
+      <link offline="true" href="http://java.sun.com/j2se/1.3/docs/api/" packagelistLoc="D:\Program Files\IBM\jdk1.3\docs\api"/>
+    </javadoc>
+<!--    <java classname="j2h" >
+      <arg line="-js src -jd doc -d doc\src"/> 
+      <classpath>
+        <pathelement location="D:\bin\j2h.jar"/>
+        <pathelement path="${java.class.path}"/>
+      </classpath>
+    </java>
+-->
+    <delete file="${compile.source}/zeta/server/ZetaConstant.java" quiet="true"/>
+    <copy file="private/zeta/server/ZetaConstant.java" tofile="${compile.source}/zeta/server/ZetaConstant.java"/>
+  </target>
+
+  <target name="war" depends="jar,api">
+    <delete file="${compile.source}/zeta/server/ZetaConstant.java" quiet="true"/>
+    <copy file="public/zeta/server/ZetaConstant.java" tofile="${compile.source}/zeta/server/ZetaConstant.java"/>
+    <zip zipfile="saver.zip">
+      <fileset dir="." includes="${compile.source}/../license/*.html"/>
+      <fileset dir="." includes="${compile.source}/SAVER/*.h"/>
+      <fileset dir="." includes="${compile.source}/SAVER/*.H"/>
+      <fileset dir="." includes="${compile.source}/SAVER/*.c"/>
+      <fileset dir="." includes="${compile.source}/SAVER/*.C"/>
+      <fileset dir="." includes="${compile.source}/SAVER/*.cpp"/>
+      <fileset dir="." includes="${compile.source}/SAVER/*.CPP"/>
+      <fileset dir="." includes="${compile.source}/SAVER/Saver.rc"/>
+      <fileset dir="." includes="${compile.source}/SAVER/saver.dsp"/>
+      <fileset dir="." includes="${compile.source}/SAVER/SAVER.dsw"/>
+      <fileset dir="." includes="${compile.source}/SAVER/RES/*.*"/>
+      <fileset dir="." includes="${compile.source}/SAVER/Release/windows/zeta.scr"/>
+    </zip>
+    <zip zipfile="service.zip">
+      <fileset dir="." includes="${compile.source}/../license/*.html"/>
+      <fileset dir="." includes="${compile.source}/service/*.c"/>
+      <fileset dir="." includes="${compile.source}/service/*.h"/>
+      <fileset dir="." includes="${compile.source}/service/*.mc"/>
+      <fileset dir="." includes="${compile.source}/service/*.cmd"/>
+      <fileset dir="." includes="${compile.source}/service/makefile"/>
+      <fileset dir="." includes="${compile.source}/service/ZetaGrid.exe"/>
+    </zip>
+    <zip zipfile="kernel.zip">
+      <fileset dir="." includes="${compile.source}/../license/*.html"/>
+      <fileset dir="." includes="${compile.source}/zeta/*.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/example/*.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/crypto/*.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/monitor/*.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/util/Base64.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/util/Properties.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/util/StreamUtils.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/util/StringUtils.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/util/ThrowableHandler.java"/>
+    </zip>
+    <java classpath="${compile.destination}" classname="zeta.tool.ZetaCheckVersions"/>
+    <zip zipfile="servlets.zip">
+      <fileset dir="." includes="${compile.source}/../license/*.html"/>
+      <fileset dir="." includes="${compile.source}/service.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/WorkUnit.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/Task.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/server/*.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/example/*.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/crypto/*.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/server/handler/*.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/server/handler/approve/*.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/server/handler/database/*.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/server/handler/statistic/*.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/server/processor/*.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/server/tool/*.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/server/util/*.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/util/*.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/web-nopassword.xml"/>
+    </zip>
+    <zip zipfile="tools.zip">
+      <fileset dir="." includes="${compile.source}/../license/*.html"/>
+      <fileset dir="." includes="${compile.source}/zeta/tool/*.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/server/tool/*.java"/>
+      <fileset dir="." includes="${compile.source}/zeta/server/WorkUnitVerifier.java"/>
+    </zip>
+    <zip zipfile="database.zip">
+      <fileset dir="." includes="license/*.html"/>
+      <fileset dir="." includes="zeta_db.ddl"/>
+    </zip>
+    <zip zipfile="ZetaGrid_${computation.version}.zip">
+      <fileset dir="." includes="${compile.source}/zeta/LICENSE"/>
+      <fileset dir="${compile.source}/zeros" includes="how-to-build"/>
+      <fileset dir="${compile.source}/zeros" includes="makefile"/>
+      <fileset dir="${compile.source}/zeros" includes="zeta_zeros.h"/>
+      <fileset dir="${compile.source}/zeros" includes="zeta_zeros.cpp"/>
+      <fileset dir="${compile.source}/zeros" includes="lowhigh.h"/>
+      <fileset dir="${compile.source}/zeros" includes="lowhigh.cpp"/>
+      <fileset dir="${compile.source}/zeros" includes="gram.h"/>
+      <fileset dir="${compile.source}/zeros" includes="gram.cpp"/>
+      <fileset dir="${compile.source}/zeros" includes="theta.h"/>
+      <fileset dir="${compile.source}/zeros" includes="theta.cpp"/>
+      <fileset dir="${compile.source}/zeros" includes="statistic.h"/>
+      <fileset dir="${compile.source}/zeros" includes="statistic.cpp"/>
+      <fileset dir="${compile.source}/zeros" includes="output.h"/>
+      <fileset dir="${compile.source}/zeros" includes="output.cpp"/>
+      <fileset dir="${compile.source}/zeros" includes="eval_zeta.h"/>
+      <fileset dir="${compile.source}/zeros" includes="eval_zeta.cpp"/>
+      <fileset dir="${compile.source}/zeros" includes="constants.h"/>
+      <fileset dir="${compile.source}/zeros" includes="check.h"/>
+      <fileset dir="${compile.source}/zeros" includes="check.cpp"/>
+      <fileset dir="${compile.source}/zeros" includes="jni.h"/>
+      <fileset dir="${compile.source}/zeros" includes="jni.cpp"/>
+      <fileset dir="${compile.source}/zeros" includes="inline.h"/>
+      <fileset dir="${compile.source}/zeros" includes="doubledouble.h"/>
+      <fileset dir="${compile.source}/zeros" includes="doubledouble.cpp"/>
+      <fileset dir="${compile.source}/zeros" includes="math.cpp"/>
+      <fileset dir="${compile.source}/zeros" includes="trydd.cpp"/>
+    </zip>
+    <zip zipfile="zeta_cmd_${client.cmd.version}.zip">
+      <fileset dir="." includes="default.cfg"/>
+      <fileset dir="windows" includes="zeta.cfg"/>
+      <fileset dir="windows" includes="zeta.cmd"/>
+      <fileset dir="windows" includes="zeta.bat"/>
+      <fileset dir="linux" includes="zeta.sh"/>
+      <fileset dir="windows" includes="zeta_progress.cmd"/>
+      <fileset dir="windows" includes="zeta_progress.bat"/>
+      <fileset dir="linux" includes="zeta_progress.sh"/>
+      <fileset dir="." includes="${jar.client_stub}"/>
+      <fileset dir="." includes="license/*.html"/>
+    </zip>
+    <war warfile="${war.destination}" webxml="${war.web_xml}">
+      <lib dir="." includes="${jar.server}"/>
+      <lib dir="packages" includes="bfj181.jar"/>
+      <lib dir="packages" includes="jimi1_0.jar"/>
+      <lib dir="packages" includes="jfreechart-0.9.4.jar"/>
+      <lib dir="packages" includes="keypoint.jar"/>
+      <zipfileset dir="" includes="zeta_cmd_${client.cmd.version}.zip"/>
+      <zipfileset dir="" includes="install_en.txt"/>
+      <zipfileset dir="" includes="install_de.txt"/>
+      <zipfileset dir="" includes="license/*.html"/>
+    </war>
+    <!-- deiverables -->
+    <zip zipfile="ZetaGrid_doc.zip">
+      <fileset dir="." includes="license/*.html"/>
+      <fileset dir="." includes="doc/**"/>
+    </zip>
+    <zip zipfile="ZetaGrid_server.zip">
+      <fileset dir="." includes="license/*.html"/>
+      <fileset dir="." includes="${war.destination}"/>
+      <fileset dir="." includes="zeta_db.ddl"/>
+      <fileset dir="." includes="${jar.client}"/>
+      <fileset dir="." includes="${jar.tools}"/>
+    </zip>
+    <delete file="${compile.source}/zeta/server/ZetaConstant.java" quiet="true"/>
+    <copy file="private/zeta/server/ZetaConstant.java" tofile="${compile.source}/zeta/server/ZetaConstant.java"/>
+  </target>
+  
+  <target name="jar" depends="compile">
+    <jar jarfile="${jar.client_stub}" compress="${jar.compress}" manifest="META-INF/MANIFEST.MF">
+      <fileset dir="${compile.destination}" includes="zeta/ZetaClient*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/ZetaProperties*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/ZetaInfo*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/util/Base64.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/util/Properties.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/util/StreamUtils.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/crypto/*.class"/>
+    </jar>
+    <jar jarfile="${jar.client}" compress="${jar.compress}">
+      <fileset dir="${compile.destination}" includes="../license/*.html"/>
+      <fileset dir="${compile.destination}" includes="zeta/ClientTask*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/WorkUnit*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/WorkloadScheduler*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/Task*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/PipeStream*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/ZetaCalc*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/ZetaTask*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/example/ZetaTask*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/example/ZetaWorkUnit*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/monitor/*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/util/Properties.class"/>
+    </jar>
+    <jar jarfile="${jar.server}" compress="${jar.compress}">
+      <fileset dir="${compile.destination}" includes="../license/*.html"/>
+      <fileset dir="${compile.destination}" includes="service.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/Task.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/crypto/*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/example/*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/server/**"/>
+      <fileset dir="${compile.destination}" includes="zeta/util/*.class"/>
+    </jar>
+    <jar jarfile="${jar.tools}" compress="${jar.compress}">
+      <fileset dir="${compile.destination}" includes="../license/*.html"/>
+      <fileset dir="${compile.destination}" includes="zeta/ClientTask*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/WorkUnit*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/Task*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/ZetaInfo*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/ZetaTask*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/crypto/*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/example/*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/tool/*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/util/*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/server/*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/server/handler/GetHandler.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/server/handler/statistic/*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/server/tool/*.class"/>
+      <fileset dir="${compile.destination}" includes="zeta/server/util/*.class"/>
+    </jar>
+  </target>
+
+</project>

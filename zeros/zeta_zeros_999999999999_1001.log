@@ -1,0 +1,27 @@
+This run (LASTN=999999999999, NRANGE=1001, MDIMENS=206403, VERSION=0140) was started at Tue Mar 02 22:15:34 2004
+Initial Gram point G(999999999998)=267653395648.617
+.... Call sumMZ at 267653395662.352, MZ=-0.22077355147737e-2,-0.22077355147737e-2
+Call search3a(4) between 267653395762.856 and 267653395763.113 to find 3 zeros.
+.... Call sumMZ at 267653395806.498, MZ=0.69521958853385e-3,0.69521958853430e-3
+.... Call sumMZ at 267653395811.376, MZ=0.26971846768414e-2,0.26971846768418e-2
+.... Call sumMZ at 267653395869.779, MZ=-0.33529485779939e-2,-0.33529485779939e-2
+Call search3a(4) between 267653395895.066 and 267653395895.323 to find 3 zeros.
+NFIRST (was input for this run)          = 999999999999
+LASTN (input for next run)               = 1000000001002
+the corresponding Gram point             = 267653395906.105
+nzevalu (number of Z-evaluations)        = 1243
+ndzevalu (number of DZ-evaluations)      = 4
+ecorate                                  = 1.2432701894317
+average time for one Z-evaluation        = 0.022929203539823
+average time for one DZ-evaluation       = 2.23075
+total time used for all Z-evaluations    = 28.501
+total time used for all DZ-evaluations   = 8.923
+total time used in this run              = 37.544
+average total time for one Z-evaluation  = 0.0301074578989575
+last m (= summation range in Z(t))       = 206393.703861791
+first line                               = 20.267653395648.745
+last line                                = 210.267653395905.848
+reduction                                = 267653395
+the starting Gram point                  = 999999999999
+number of lines                          = 1003
+@
